@@ -1,0 +1,77 @@
+.header
+    position: relative
+    padding-block: 100px
+    
+.list
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-inline: 100px
+
+.link
+    position: relative
+    padding-block: 5px
+    color: var(--base-color-1)
+    &::before
+        content: ""
+        position: absolute
+        height: 1px
+        width: 0
+        background-color: var(--base-color-1)
+        bottom: 0
+        transition: width .2s linear
+    &:hover
+        &::before
+            width: 100%
+    &_border
+        padding: 0
+        margin: 0
+        padding: 10px 20px
+        border: 1px solid var(--base-color-1)
+        border-radius: 100px
+        &::before
+            content: none
+        
+.change-theme
+    position: absolute
+    display: block
+    top: 50px
+    right: 0
+    width: 32px
+    height: 32px
+    transform: translate(-50%, -50%)
+    background-color: var(--base-color-1)
+    border-radius: 50%
+    transition: box-shadow .1s linear
+    cursor: pointer
+    input
+        display: none
+
+    &:hover
+        box-shadow: 0 0 10px 7px var(--base-color-3)
+
+@media screen and (max-width: 810px)
+    .header
+        font-size: 14px
+    .list
+        flex-direction: column
+        margin: 0
+        gap: 20px
+            
+    .item
+        &:nth-child(1)
+            order: 2
+        &:nth-child(2)
+            order: 1
+        &:nth-child(3)
+            order: 3
+
+@media screen and (max-width: 630px)
+    .item
+        &:nth-child(2)
+            text-align: center
+
+
+@media screen and (max-width: 390px)
+    .header
+        font-size: 12px

@@ -1,0 +1,44 @@
+@import url('./fonts/fonts.css');
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	max-width: 1200px;
+	margin-inline: auto;
+}
+
+html[data-theme='dark-theme'] {
+	--body-color-1: #000;
+
+	--base-color-1: #bee9e8;
+	--base-color-2: #0d0d0d;
+	--base-color-3: #5fa8d3;
+	--base-color-4: #373737;
+}
+
+html[data-theme='light-theme'] {
+	--body-color-1: #fff;
+
+	--base-color-1: #000;
+	--base-color-2: #dbdbdb;
+	--base-color-3: #767676;
+	--base-color-4: #cfcfcf;
+}
+
+body {
+	font-family: 'Tektur';
+	background-color: var(--body-color-1);
+	transition: background-color 0.2s linear;
+	color: var(--base-color-1);
+}

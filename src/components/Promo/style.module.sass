@@ -1,0 +1,91 @@
+.section
+    position: relative
+    padding-block: 100px
+    margin-top: 80px
+
+.title
+    font-family: "Caveat"
+    font-size: 48px
+    font-weight: bold
+    line-height: 1.2
+    margin: 0 auto
+    max-width: 500px
+    text-align: center
+
+.subtitle
+    max-width: 500px
+    margin: 0 auto
+    padding-inline: 15px
+    margin-top: 20px
+    text-align: center
+
+.btn-wrapper
+    text-align: center
+    margin-top: 20px
+
+.button
+    font-family: "Tektur"
+    font-size: 14px
+    
+    padding: 15px 12px
+
+    border: none
+    outline: none
+    border-radius: 8px
+    background-color: var(--base-color-1)
+    color: var(--body-color-1)
+
+    cursor: pointer
+
+    transition: background-color .2s
+    &:hover
+        background-color: var(--base-color-3)
+
+.figure
+    position: absolute
+    top: 44px
+    left: 12px
+
+.ellipse
+    position: absolute
+    width: 479px
+    height: 252px
+    border-radius: 100%
+    border: 1px solid var(--base-color-1)
+    opacity: 0.3
+    &-1
+        transform: rotate(-19deg)
+        animation: 10s ease-out 0.4s infinite rotate 
+    &-2
+        transform: rotate(-124deg)
+        animation-delay: 2s
+        animation: 10s ease-in 0s infinite rotate 
+
+@keyframes rotate
+    0%
+        transform: rotate(0)
+    50%
+        transform: rotate(360deg)        
+    100%
+        transform: rotate(0)
+        
+@media screen and (max-width: 810px)
+    
+    .subtitle
+        font-size: 14px
+
+    .ellipse
+        width: 300px
+        height: 150px
+
+@media screen and (max-width: 390px)
+    .section
+        h2
+            font-size: 30px
+
+    .subtitle
+        font-size: 12px
+
+    .ellipse
+        width: 200px
+        height: 100px
