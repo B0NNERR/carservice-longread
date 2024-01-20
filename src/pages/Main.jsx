@@ -9,12 +9,14 @@ import Modal from '../components/Modal/Modal';
 import Promo from '../components/Promo/Promo';
 
 import ModalForm from '../components/ModalForm/ModalForm';
+import { Link } from 'react-router-dom';
 
 const Main = () => {
 	const [isActiveModalForm, setActiveModalForm] = useState(false);
 	return (
 		<>
-			<Hero/>
+			<Link to={'/admin'}>Админка</Link>
+			<Hero />
 			<Gallery />
 			<Experience />
 			<Comments />

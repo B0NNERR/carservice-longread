@@ -13,7 +13,6 @@ function App() {
 
 	return (
 		<>
-			<Link to={'/admin'}>Админка</Link>
 			<Routes>
 				<Route path='/' element={<Main />} />
 				<Route path='/contacts' element={<ContactsPage />} />
