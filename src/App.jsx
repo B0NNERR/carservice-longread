@@ -12,21 +12,18 @@ function App() {
 	const context = useContext(AuthContext);
 
 	return (
-		<Routes>
-			<Route
-				path='/'
-				element={<Main/>}
-			/>
-			<Route
-				path='/contacts'
-				element={<ContactsPage/>}
-			/>
-			<Route
-				path='/admin'
-				element={context.isAdmin ? <AdminPanel /> : <Auth />}
-			/>
-			<Route path='*' element={<NotFoundPage />} />
-		</Routes>
+		<>
+			<Link to={'/admin'}>Админка</Link>
+			<Routes>
+				<Route path='/' element={<Main />} />
+				<Route path='/contacts' element={<ContactsPage />} />
+				<Route
+					path='/admin'
+					element={context.isAdmin ? <AdminPanel /> : <Auth />}
+				/>
+				<Route path='*' element={<NotFoundPage />} />
+			</Routes>
+		</>
 	);
 }
 
