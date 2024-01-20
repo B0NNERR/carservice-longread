@@ -19,12 +19,13 @@ a {
 }
 
 html[data-theme='dark-theme'] {
-	--body-color-1: #000;
+	--body-color-1: #000000;
 
 	--base-color-1: #bee9e8;
-	--base-color-2: #0d0d0d;
+	--base-color-2: #171717;
 	--base-color-3: #5fa8d3;
 	--base-color-4: #373737;
+	--base-color-5: #ababab3a;
 }
 
 html[data-theme='light-theme'] {
@@ -34,6 +35,7 @@ html[data-theme='light-theme'] {
 	--base-color-2: #dbdbdb;
 	--base-color-3: #767676;
 	--base-color-4: #cfcfcf;
+	--base-color-5: #36363647;
 }
 
 body {

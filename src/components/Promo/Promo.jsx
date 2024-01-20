@@ -1,6 +1,6 @@
 import styles from './style.module.sass';
 
-const Promo = ({ setActive }) => {
+const Promo = ({ setActiveModalForm }) => {
 	return (
 		<section className={`container ${styles.section}`}>
 			<h2 className={styles.title}>Начать с нами</h2>
@@ -11,7 +11,7 @@ const Promo = ({ setActive }) => {
 			<div className={styles['btn-wrapper']}>
 				<button
 					className={styles.button}
-					onClick={() => setActive(true)}
+					onClick={() => setActiveModalForm(true)}
 				>
 					Почини мою машину
 				</button>

@@ -2,10 +2,10 @@ import Header from '../Header/Header';
 
 import styles from './style.module.sass';
 
-const Hero = ({ setTheme, theme }) => {
+const Hero = () => {
 	return (
 		<section className={`container ${styles.section}`}>
-			<Header setTheme={setTheme} theme={theme}></Header>
+			<Header></Header>
 
 			<h1 className={styles.hero}>repair</h1>
 

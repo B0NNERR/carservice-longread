@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styles from './style.module.sass';
+import { Link } from 'react-router-dom';
+import { MainContext } from '../../context/MainProvider';
 
-const Header = ({ setTheme, theme }) => {
+const Header = ({theme, setTheme}) => {
+	const context = useContext(MainContext)
+
 	return (
 		<header className={styles.header}>
 			<label className={styles['change-theme']} htmlFor='theme'>
@@ -10,11 +14,11 @@ const Header = ({ setTheme, theme }) => {
 					name='theme'
 					id='theme'
 					onChange={(e) => {
-						if (theme === 'dark-theme') setTheme('light-theme');
-						if (theme === 'light-theme') setTheme('dark-theme');
+						if (context.theme === 'dark-theme') context.changeTheme('light-theme');
+						if (context.theme === 'light-theme') context.changeTheme('dark-theme');
 					}}
 				/>
-				{theme === 'dark-theme' ? (
+				{context.theme === 'dark-theme' ? (
 					<svg
 						width='32px'
 						height='32px'
@@ -50,9 +54,9 @@ const Header = ({ setTheme, theme }) => {
 			</label>
 			<ul className={styles.list}>
 				<li className={styles.item}>
-					<a className={styles.link} href=''>
+					<Link className={styles.link} to={'/'}>
 						Главная
-					</a>
+					</Link>
 				</li>
 				<li className={styles.item}>
 					<div
@@ -63,9 +67,9 @@ const Header = ({ setTheme, theme }) => {
 					</div>
 				</li>
 				<li className={styles.item}>
-					<a className={styles.link} href=''>
+					<Link to={'/contacts'} className={styles.link}>
 						Контакты
-					</a>
+					</Link>
 				</li>
 			</ul>
 		</header>

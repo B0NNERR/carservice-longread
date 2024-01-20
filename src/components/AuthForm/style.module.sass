@@ -1,0 +1,47 @@
+.form
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+    padding: 40px
+    border-radius: 10px
+    box-shadow: 0 0 10px 1px var(--base-color-4)
+    background-color: var(--base-color-2)
+
+.label
+    text-align: right
+
+.input
+    font-family: 'Courier New', Courier, monospace
+    font-size: 14px
+    border: none
+    outline: none
+    border-radius: 5px
+    background-color: var(--base-color-4)
+
+    padding: 5px 10px
+    &-wrapper
+        display: grid
+        grid-template-columns: 1fr 2fr
+        gap: 20px
+        margin-bottom: 20px
+            
+            
+
+.btn
+    font-family: "Tektur"
+    font-size: 16px
+    padding: 5px 15px
+    background-color: var(--base-color-1)
+    border: none
+    outline: none
+    border-radius: 5px
+    cursor: pointer
+    transition: background-color .2s linear
+    color: var(--base-color-2)
+    &:hover
+        background-color: var(--base-color-3)
+
+    &-wrapper
+        text-align: center
