@@ -72,10 +72,10 @@ const Footer = () => {
 			<div className={styles.footnote}>
 				© Created by{' '}
 				<a href='https://t.me/timmur_kom' target='_blank'>
-					Timur Gabdrashitov
+					Ruslan Gabdrashitov
 				</a>
 			</div>
-			<div>2024</div>
+			<div>2026</div>
 		</footer>
 	);
 };
